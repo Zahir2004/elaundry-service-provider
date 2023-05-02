@@ -1,0 +1,66 @@
+#Layer-Box {
+    position: relative;
+    margin: auto;
+    border-radius: 20px;
+    border: 3px solid cornflowerblue;
+    box-shadow: 5px 5px rgb(204, 214, 225);
+    display: block;
+    top: 30px;
+    width: 800px;
+}
+#Top-Img{
+    height: 30%;
+    position: relative;
+    width: 99%;
+    border-radius: 20px;
+    padding: 4px;
+    padding-bottom: 20px;
+    height: 400px;
+}
+#Layer-Box-Table {
+    position: relative;
+    margin: auto;
+    width: 750px;
+    display: block;
+    padding: 5px;
+}
+#Table {
+    position: relative;
+    margin: auto;
+    padding: auto;
+    width: 700px;
+}
+.Table-Row {
+    text-align: center;
+    font-style: normal;
+    padding: 10px;
+}
+.Table_Heading {
+    font-style: oblique;
+    padding-bottom: 15px;
+}
+.Quantity-Take {
+    width: 50px;
+    height: 20px;
+    font-size: 17px;
+    padding: auto;
+}
+.Last-Row {
+    padding: 2em;
+}
+.Order_Button {
+    position: relative;
+    left: 26%;
+    width: 150px;
+    height: 40px;
+    margin: 15px;
+    font-size: medium;
+    font-weight: bold;
+    font-style: oblique;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(234, 214, 135);
+}
+.Order_Button:hover {
+    background-color:rgb(235, 185, 125);
+}

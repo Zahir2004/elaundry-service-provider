@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Login.css' %}">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<form method="POST" action="login">
+  {% csrf_token %}
+  <section class="login-block">
+    <div class="container">
+	<div class="row">
+		<div class="col-md-4 login-sec">
+		    <h2 class="text-center">Login Now</h2>
+		    <form class="login-form">
+  <div class="form-group">
+    <input type="text" class="form-control" name='username' placeholder="Username">  
+  </div>
+  <div class="form-group">  
+    <input type="password" class="form-control" name='password' placeholder="Password">
+  </div>
+    <div class="form-check">
+    <button type="submit" class="btn btn-login float-right">Submit</button>
+  </div>
+  <style>
+    h3{
+      color: red;
+    }
+  </style>
+  {% for message in messages %}
+  <h3>{{message}}</h3>
+  {% endfor %}
+</form>
+<div class="copy-text">Laundry Services</div>
+		</div>
+		<div class="col-md-8 banner-sec">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                 <!-- <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  </ol> -->
+            <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img class="d-block img-fluid" src="https://th.bing.com/th/id/OIP.fWGtIUq_2XTfRMyXkRxXzgHaEK?w=286&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="banner-text">
+            <h2>Welcome to E-laundry Service provider</h2>
+        </div>	
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block img-fluid" src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="banner-text">
+            <h2>Welcome to E-laundry Service provider</h2>
+        </div>	
+    </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block img-fluid" src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="banner-text">
+            <h2>Welcome to E-laundry Service provider</h2>
+        </div>	
+    </div>
+  </div>
+  </div>	   
+		    
+		</div>
+	</div>
+</div>
+  </section>
+</body>
+</html>

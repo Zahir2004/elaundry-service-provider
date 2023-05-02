@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Take Order</title>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'order.css' %}"/>
+    </head>
+    <body>
+        {%load static%}
+        <div id="Layer-Box">
+            <img id="Top-Img" src="{% static 'login_photo1.jpeg' %}" alt="">
+            <div id="Layer-Box-Table">
+                <form action="items" method="POST">
+                    {% csrf_token %}
+                    New Item Name : <input type="text" name="Item_name" id="name" placeholder="Item Name">
+                    New Item Price : <input type="text" name="Item_price" id="price" placeholder="Item Price">
+                    <button type="submit" class="Item-add">Add Item</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

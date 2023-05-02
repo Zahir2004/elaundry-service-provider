@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customer Orders</title>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'order.css' %}"/>
+    </head>
+    <body>
+        {%load static%}
+        <div id="Layer-Box">
+            <img id="Top-Img" src="{% static 'login_photo1.jpeg' %}" alt="">
+            <div id="Layer-Box-Table">
+                <table id="Table">
+                    <tr class="Table-Row">
+                        <th class="Table_Heading">Username</th>
+                        <th class="Table_Heading">Phone No</th>
+                        <th class="Table_Heading">Quantity</th>
+                        <th class="Table_Heading">Price</th>
+                        <th class="Table_Heading">Date Of Order</th>
+                    </tr>
+                    {% for order in orders %}
+                    <tr class="Table-Row">
+                        <td class="Table_data">{{order.username}}</td>
+                        <td class="Table_data">{{order.ph_num}}</td>
+                        <td class="Table_data">{{order.total_quantity}}</td>
+                        <td class="Table_data">{{order.total_price}}</td>
+                        <td class="Table_data">{{order.date}}</td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td><a href='/home'><button class="Order_Button">Back</button></a></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </body>
+</html>

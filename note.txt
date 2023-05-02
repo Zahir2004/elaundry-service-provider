@@ -1,0 +1,105 @@
+virtual environment name : e_laundry_project
+
+4th sem project :- note for django:
+# first make a virtual environment name :e_laundry_project
+# start a project in virtual environment name :project_4th_sem
+# make a app for project where all project work can be done name:e_laundry
+# in app e_laundry add a urls.py file  
+# in urls.py import path from django.urls for define a path of every url we use in the 
+  project urls to our main project
+# we define urlpatterns for list the url we use
+# we use views by from . import views for done somthing like http responce,json or 
+  difine functions etc.
+# we define function in views.py which can excess by views.function_name in urls.py
+# in views.py for getting httpresponce we import Httpresponce from django.http
+# for getting the url in the main project :project_4th_sem we have to specifies include
+  in urls.py from project_4th_sem and include the urls.py from e_laundry 
+# we make a template folder for store all template file like html fils use in project
+# we have to define the template folder in settings.py in  project_4th_sem for know the 
+  project where to search the template file and get the file from it
+# we search TEMPLATES in settings.py and in DIRS we define the template folder for know
+  the project where to look for the template files
+# we can directly define the html file by render it in function inside the views.py
+# we use context as a dictionary for defing the keys and values for the html page if
+  any variable we want to change from project and we can show the value through the key
+  by defining {{key_of_the_value}} in html file
+# here we take the data from user by taking a variable and get the data by request from
+  the name define in the line inside the html file :request.GET/POST['name_in_html']
+# when we use GET method the input from the user can display with the link of the web 
+# so for privacy/personal purpose we use POST method so the inputs not display anymore 
+  but for using POST method we have to access it from CSRF token and we do it by define
+  {% csrf_token %} in html file
+# for all the static file like css file,js file etc, we make a static folder
+# for defining the static folder for the project we have to first import os below 
+  import path in settings.py and after that, below STATIC_URL we define static file
+# for working of css file we have to use the static tag in the link of css file and
+  load the static tag in the html file 
+  ex:-{% load static %}
+      <link rel="stylesheet" href="{% static 'css_file' %}">
+# in models.py we can define a class,declare its elements and its datatype and one of 
+  the element is id ,then give value for the class element in views.py and render it by
+  dictionary and give the key in html file 
+  ex-:{{key_name.class_element}}
+# for loop in django in html file:- 
+  {% for __ in __ %}
+  --------
+  --------
+  {% endfor %}
+# for condition in django in html file:- {% if -<condition>- %}
+  ------
+  {% elif -<conditoin>- %}
+  ------ 
+  {% else %}
+  ------
+  {% endif %}
+# by define a class with models.Model it become a model and it dont requre an id to 
+  define :-class Class_Name(models.Model) 
+# we can use different fields in the place of datatype
+# for integrate database we have to register the e_laundry in project_4th_sem through 
+  settings.py by adding e_laundry in INSTALLED_APPS 
+# now we migrate the data into the database through command prompt by 2 step command
+# by add /admin in our link it open a admin panel log in page and give the username 
+  password from command prompt we enter the admin panel
+  user_name = e-laundry
+  password = 21ug010cse
+# for reflecting the model in admin panel we have to register it in admin.py by
+  :- admin.site.register(Model_Class_Name)
+# for get the class from models we have to import it to views.py and then render it and
+  for get all the data we use :- Class_name.objects.all()
+# now we make the register page so we add a register path in urls.py
+# define the register function in views.py
+# in register function for redirect the user to another page after signup we have to 
+  first import redirect and for saving the user in database we have to import User, auth
+  where User is the databse where all user can store and auth is a method which allow us
+  to authenticate and we also import messages from django.contrib
+# for knowing someone is authenticated inside the database and visit the homepage we 
+  can show some differnt stuff like his name by us user.is_authenticated for varified 
+# for change the database from sqlite to postgresql we change the DATABASE in the 
+  setting.py and change the ENGIN,NAME and add USER,PASSWORD,HOST in it
+# now for our own uses we need to create a custom user for saving the data we want for
+  the user
+# so we first import AbstractBaseUser and BaseUserManager from django.contrib.auth.models 
+# make our own User name as Holder by create class Holder and class MyHolderManage
+# after finish the class we should define :-
+              AUTH_USER_MODEL = 'app_name,Custom_user_class_name'
+  here we define AUTH_USER_MODEL = 'e_laundry,Holder'
+# for fully usable we have to delete all privious migration and set a new migration to
+  work of custom user
+# for custom user we have to make a superuser by:-
+              python manage.py createsuperuser
+  Username: admin
+  Email: tonyaklesh4286@gmail.com
+  Password: 4286
+  Phone: 4286
+  role: 2
+# for redirect a html page we have first creat method and use it in the anchor tag of 
+  html page and in views.py we have to make a function of it
+# we can only get the data from html page by input type and we do that by pass the name
+  of the input type in a method of views.py by 
+                variable = request.POST['name']
+# When we retrive data from the postgresql table we have to show the structure of our 
+  code to understand how the data is getting , we write model_name.attributes.all()
+  [id].column_name
+      example:-
+              item.objects.all()[0].item_name
+#

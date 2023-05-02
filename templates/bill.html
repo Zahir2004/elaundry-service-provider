@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Take Order</title>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'order.css' %}"/>
+    </head>
+    <body>
+        <div id="Layer-Box">
+            <div id="Layer-Box-Table">
+                    <table id="Table">
+                        <tr class="Table-Row">
+                            <th class="Table_Heading">Item</th>
+                            <th class="Table_Heading">Quantity</th>
+                            <th class="Table_Heading">price</th>
+                        </tr>
+                        <tr class="Table-Row"> 
+                            <td><span class="product_quantity">{{name_1}}</span></td>                           
+                            <td><span class="product_quantity">{{num1}}</span></td>
+                            <td><span>&#8377;</span><span class="product_price">{{in_price1}}</span></td>
+                        </tr>
+                        <tr class="Table-Row"> 
+                            <td><span class="product_quantity">{{name_2}}</span></td>                           
+                            <td><span class="product_quantity">{{num2}}</span></td>
+                            <td><span>&#8377;</span><span class="product_price">{{in_price2}}</span></td>
+                        </tr>
+                        <tr class="Table-Row"> 
+                            <td><span class="product_quantity">{{name_3}}</span></td>                           
+                            <td><span class="product_quantity">{{num3}}</span></td>
+                            <td><span>&#8377;</span><span class="product_price">{{in_price3}}</span></td>
+                        </tr>
+                        <tr classes="Table-Row">
+                            <td colspan="2" class="Last-Row">{{total_quantity}}</td>
+                            <td class="Last-Row">{{total_price}}</td>
+                        </tr>
+                    </table>
+                    <a href='/home'><button type='button' class='Order_Button'>Back To Home Page</button></a>
+            </div>
+        </div>
+    </body>
+</html>

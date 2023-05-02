@@ -1,0 +1,320 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Laundryl | Teamplate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/progressbar_barfiller.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated-headline.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+    {% csrf_token %}
+    <!-- ? Preloader Start -->
+    {% load static %}
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'assets/img/logo/loader.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <!-- Logo -->
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="/home"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
+                    </div>
+                    <div class="menu-wrapper  d-flex align-items-center">
+                        <!-- Main-menu -->
+                        <div class="main-menu d-none d-lg-block">
+                            <nav> 
+                                <ul id="navigation">                                                                                          
+                                    <li><a href="/home">Home</a></li>
+                                    <li><a href="/about">About</a></li>
+                                    <li  class="active"><a href="/service">Services</a></li>
+                                    
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div> 
+                <div class="header-right d-none d-lg-block">
+                    <a href="#" class="header-btn1"><img src="{% static 'assets/img/icon/call.png' %}" alt=""> (91) 6372741061</a>
+                    <a href="#" class="header-btn2">contact</a>
+                </div>
+                <!-- Mobile Menu -->
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2 section-bg2 hero-overly" data-background="{% static 'assets/img/hero/hero2.png' %}">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2">
+                                <h2>Our Services</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+        <!--? Services Area Start -->
+        <section class="services-area pt-top border-bottom pb-20 mb-60">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-55">
+                            <span class="element">Our Process</span>
+                            <h2>This is how we work</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center">
+                            <div class="cat-icon">
+                                <img src="{% static 'assets/img/icon/services-icon1.svg' %}" alt="">
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a href="/service">We collect your clothes</a></h5>
+                                <p>The automated process starts as soon as your clothes are collected</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center">
+                            <div class="cat-icon">
+                                <img src="{% static 'assets/img/icon/services-icon2.svg' %}" alt="">
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a href="/service">Wash your clothes</a></h5>
+                                <p>The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-cat text-center">
+                            <div class="cat-icon">
+                                <img src="{% static 'assets/img/icon/services-icon3.svg' %}" alt="">
+                            </div>
+                            <div class="cat-cap">
+                                <h5><a href="/service">Get delivery</a></h5>
+                                <p>After your clothes are cleaned it is deliver as soon as possible to your place</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services End -->
+        <!--? Offer-services Start  -->
+        <section class="offer-services pb-bottom2">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-55">
+                            <span class="element">Services</span>
+                            <h2>Services we offer</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single-offers">
+                            <img src="{% static 'assets/img/gallery/offers1.png' %}" alt="" class=" w-100">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single-offers">
+                            <img src="{% static 'assets/img/gallery/offers2.png' %}" alt="" class=" w-100">
+                            <div class="offers-caption text-center">
+                                <div class="cat-icon">
+                                    <img src="{% static 'assets/img/icon/offers-icon1.png' %}" alt="">
+                                </div>
+                                <div class="cat-cap">
+                                    <h5><a href="/service">Cloth laundry</a></h5>
+                                    <p>Your cloth is go in to machine and cleaned</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single-offers">
+                            <img src="{% static 'assets/img/gallery/offers2.png' %}" alt="" class=" w-100">
+                            <div class="offers-caption text-center">
+                                <div class="cat-icon">
+                                    <img src="{% static 'assets/img/icon/offers-icon1.png' %}" alt="">
+                                </div>
+                                <div class="cat-cap">
+                                    <h5><a href="/service">Cloth ironing</a></h5>
+                                    <p>Your cloth is go in to machine and cleaned</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single-offers">
+                            <img src="{% static 'assets/img/gallery/offers4.png' %}" alt="" class=" w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer Start-->
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                     <div class="single-footer-caption mb-50">
+                       <div class="single-footer-caption mb-30">
+                        <!-- logo -->
+                        <div class="footer-logo mb-35">
+                            <a href="index.html"><img src="{% static 'assets/img/logo/logo2_footer.png' %}" alt=""></a>
+                        </div>
+                        <div class="footer-tittle">
+                            <div class="footer-pera">
+                                <p>We provide e-laundry service to all people of all catagory</p>
+                            </div>
+                        </div>
+                        <!-- social -->
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="https://facebook.in"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                <div class="single-footer-caption mb-50">
+                    <div class="footer-tittle">
+                        <h4>Services </h4>
+                        <ul>
+                            <li><a href="#">- Clean</a></li>
+                            <li><a href="#">- Dry Clean</a></li>
+                            <li><a href="#">- Ironing Services</a></li>
+                            <li><a href="#">- Laundry Service Gunupur</a></li>
+                            <!-- <li><a href="#">- Laundry App</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                <div class="single-footer-caption mb-50">
+                    <div class="footer-tittle">
+                        <h4>Get in touch</h4>
+                        <ul>
+                            <li class="number"><a href="#"> (91) 6372741061</a></li>
+                            <li><a href="#">zahirhossain0123@gmail.com</a></li>
+                            <li><a href="#">CSE, GIET University-765022</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer-bottom area -->
+<div class="footer-bottom-area section-bg2" data-background="{% static 'assets/img/gallery/footer-bg.png' %}">
+    <div class="container">
+        <div class="footer-border">
+           <div class="row d-flex align-items-center">
+               <div class="col-xl-12 ">
+                   <div class="footer-copy-right text-center">
+                       <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Aklesh & Atman &copy;<script>document.write(new Date().getFullYear());</script>  This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="" target="_blank">Zahir</a>
+                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End-->
+</footer>
+<!-- Scroll Up -->
+<div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- JS here -->
+{% load static %}
+<script src="{% static './assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="{% static './assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static './assets/js/popper.min.js' %}"></script>
+<script src="{% static './assets/js/bootstrap.min.js' %}"></script>
+<!-- Jquery Mobile Menu -->
+<script src="{% static './assets/js/jquery.slicknav.min.js' %}"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="{% static './assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static './assets/js/slick.min.js' %}"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="{% static './assets/js/wow.min.js' %}"></script>
+<script src="{% static './assets/js/animated.headline.js' %}"></script>
+<script src="{% static './assets/js/jquery.magnific-popup.js' %}"></script>
+
+<!-- Date Picker -->
+<script src="{% static './assets/js/gijgo.min.js' %}"></script>
+<!-- Nice-select, sticky -->
+<script src="{% static './assets/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static './assets/js/jquery.sticky.js' %}"></script>
+<!-- Progress -->
+<script src="{% static './assets/js/jquery.barfiller.js' %}"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="{% static './assets/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static './assets/js/waypoints.min.js' %}"></script>
+<script src="{% static './assets/js/jquery.countdown.min.js' %}"></script>
+<script src="{% static './assets/js/hover-direction-snake.min.js' %}"></script>
+
+<!-- contact js -->
+<script src="{% static './assets/js/contact.js' %}"></script>
+<script src="{% static './assets/js/jquery.form.js' %}"></script>
+<script src="{% static './assets/js/jquery.validate.min.js' %}"></script>
+<script src="{% static './assets/js/mail-script.js' %}"></script>
+<script src="{% static './assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="{% static './assets/js/plugins.js' %}"></script>
+<script src="{% static './assets/js/main.js' %}"></script>
+
+</body>
+</html>

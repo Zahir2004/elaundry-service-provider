@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Order</title>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'order.css' %}"/>
+    </head>
+    <body>
+        {%load static%}
+        <div id="Layer-Box">
+            <img id="Top-Img" src="{% static 'login_photo1.jpeg' %}" alt="">
+            <div id="Layer-Box-Table">
+              {% if user_orders == none %}
+                <style>
+                    h3{
+                      color: white;
+                    }
+                  </style>
+                  {% for message in messages %}
+                  <h3>{{message}}</h3>
+                  {% endfor %}
+              {% else %}
+                <table id="Table">
+                        <tr class="Table-Row">
+                            <th class="Table_Heading">Username</th>
+                            <th class="Table_Heading">Phone No</th>
+                            <th class="Table_Heading">Quantity</th>
+                            <th class="Table_Heading">Price</th>
+                        </tr>
+                    {% for user_order in user_orders %}
+                        <tr class="Table-Row">
+                            <td class="Table_data">{{user_order.username}}</td>
+                            <td class="Table_data">{{user_order.ph_num}}</td>
+                            <td class="Table_data">{{user_order.total_quantity}}</td>
+                            <td class="Table_data">{{user_order.total_price}}</td>
+                            <td class="Table_data"><a href="{% url 'delete' user_order.id %}"><button>Order Delete</button></a></td>    
+                        </tr>
+                    {% endfor %}   
+                </table>
+              {% endif %}
+                <a href='/home'><button type='button' class='Order_Button'>Back To Home Page</button></a>
+            </div>
+        </div>
+    </body>
+</html>
